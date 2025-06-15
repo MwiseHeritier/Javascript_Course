@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays and Loops</title>
+</head>
+<body>
+<script>
+  /*
+  const myArray = [1, 2, 3];
+  console.log(myArray);
+
+  [1, 'hello', true, {name: 'socks'}, [1, 2]] // we can save an array either in variable or i other array because is a value.
+  console.log(typeof [1, 2]); // object (an array is an object (it is special type of object))
+  console.log(Array.isArray([1, 2])); // True ( this checks if the value is an array)
+
+    myArray.splice(0, 1); // first argument is the index of element we want to remove, second is the number of elements we want to remove starting from the index.
+    console.log(myArray);
+    */
+    
+
+    
+    /*
+    let i = 1;
+    while(i <= 5){
+      console.log(i);
+      
+    }
+
+    for (let i = 1; i <= 5; i++){
+      console.log(i);
+    }
+    // Use loop to generate random numbers until one that's at least 0.5
+
+    let randomNumber = 0;
+    while(randomNumber < 0.5){
+      randomNumber = Math.random();
+    }
+    console.log(randomNumber);
+
+    */
+
+    /*
+      Looping through an array
+      ------------------------
+      1. Go through each value of an array one by one.
+      2. Do something with each value. 
+    */
+
+
+    /*
+    const TodoList = ['make dinner', 'wash dishes', 'watch youtube'];
+    for(let i = 0; i < TodoList.length; i++){
+    const value = TodoList[i];
+    console.log(value);
+    }
+    */
+
+
+    /* Accumulator Pattern
+    --------------------
+     1.create a variable to store the result.
+      2.Loop through the array and update the result.
+    */
+
+    /*
+    const nums = [1, 2, 3];
+    let  total = 0;
+
+    for (let i = 0; i < nums.length; i++){
+      const num = nums[i];
+      total += num;
+    }
+    console.log(total);
+
+    const numsDoubled = [];
+    for (let i = 0; i < nums.length; i++){
+      const num = nums[i]
+      numsDoubled. push(num * 2);
+    }
+    console.log(numsDoubled);
+    */
+
+    const array1 = [1, 2, 3];
+    const array2 = array1.slice();
+    array2.push(4);
+    console.log(array1);
+    console.log(array2);
+
+    //DESTRUCTING SHORTCUT
+    //--------------------
+
+    const [firstValue, secondValue] = [1, 2, 3]
+    console.log(firstValue,secondValue);
+
+    // BREAK STATEMENT
+    //----------------
+    for (let i = 0; i <= 10; i++){
+      if(i === 8){
+        break;
+      }
+        console.log(i);
+      
+    }
+
+    // CONTINUE STATEMENT
+    //------------------
+    /*
+    for (let i = 0; i <= 10; i++){
+      if(i === 3){
+        continue;
+      }
+        console.log(i);
+      
+    }
+    */
+
+    let i = 1;
+    while(i <= 10){
+      if (i % 3 == 0){
+        i++;
+        continue;
+      }
+       console.log(i);
+    }
+    
+    function doubleArray(nums){
+      const numsDoubled = [];
+      for (let i = 0; i < nums.length; i++){
+        const num = nums[i]
+        if(num === 0){
+          break; // return numsDoubled;
+        }
+        numsDoubled. push(num * 2);
+      }
+      return numsDoubled;
+
+    }
+    console.log(doubleArray( [1, 2, 3]));
+    
+  
+
+
+  </script>
+</body>
+</html>

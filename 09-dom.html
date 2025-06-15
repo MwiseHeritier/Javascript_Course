@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+  </head>
+  <body>
+    <button>Hello</button>
+    <button class="js-button">Second button</button>
+    <script>
+      
+
+      /*
+      console.log(document.title);
+      document.title = "changed";
+
+      console.log(document.body); //DOM combines JavaScript and HTML together and gives javascript control of the web page.
+      console.log(typeof document.body); // When an HTML element is inside a JavaScript, The HTML element is converted into javaScript object.
+       
+      //document.body.innerHTML = Hello; // innerHTML property controls all the HTML inside the body. Every HTML element has a property.innerHTML.
+      console.log(document.body.innerHTML);
+      document.body.innerHTML = '<button>Good Job!</button>';
+      */
+
+      /*
+     document.body.innerHTML = "Hello";
+     document.title = "Good job!";
+     */
+
+     console.log(document.querySelector('button').innerHTML); // (let us get any element from page and put inside javaScript).
+     document.querySelector('button').innerHTML = 'changed';
+     const buttonElement = document.querySelector('.js-button'); //we usually end the variable name with element or LM to make it clear, there is HTML element inside the variable.
+     console.log(buttonElement);
+    </script>
+
+    
+    
+  </body>
+</html>

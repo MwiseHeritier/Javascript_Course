@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Projects</title>
+  </head>
+  <body>
+
+    <p>YouTube Subscribe Button</p>
+    <button onclick=" subscribe ();
+    " class="js-subscribe-button">Subscribe</button>
+
+      <p>Amazon Shipping Calculator</p>
+      <input type="number" placeholder="Cost of order" 
+      class="js-cost-input" onkeydown=" handleCostKeydown(event);
+
+      "> <!--event object is an object provided by JS  and contains information about the event-->
+      <!---
+        -clicks,keydowns, scrolling and hover are events
+        -onclick,onkeydown, onscroll, onmouseenter and onmouseleave  are event listeners (they check for events and runs javascript)
+      -->
+      <button onclick="calculateTotal();">Calculate</button>
+      <p class="js-total-cost"></p>
+
+    <script>
+      window.document//Documents object represents the web page while  Window object represents a browser.
+      function subscribe(){
+        const buttonElement = document.querySelector('.js-subscribe-button');
+
+      if(buttonElement.innerText === 'Subscribe'){
+        buttonElement.innerHTML = 'Subscribed';
+      }else{
+        buttonElement.innerHTML = 'Subscribe';
+      }
+    }
+    function calculateTotal() {
+     const inputElement = document.querySelector('.js-cost-input');
+
+     let cost = Number(inputElement.value); //whenever we get a value from the DOM , the value will be a string. That is why we change it using Number method.
+
+     if(cost < 40){
+      cost = cost + 10;
+     }
+     document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+    }
+    
+    function handleCostKeydown(event) {
+      if (event.key === 'Enter'){
+        calculateTotal();
+      }  
+    }
+  </script>
+    
+  </body>
+</html>
